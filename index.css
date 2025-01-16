@@ -1,0 +1,90 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: #ffffff;
+}
+
+.stopwatch {
+    text-align: center;
+    background: rgba(17, 24, 39, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    max-width: 350px;
+    width: 90%;
+}
+
+.display {
+    font-size: 3em;
+    margin: 20px 0;
+    font-weight: 600;
+    color: #60a5fa;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.start {
+    background: #16a34a;
+}
+
+.start:hover:not(:disabled) {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.pause {
+    background: #eab308;
+}
+
+
+
+.reset {
+    background: #dc2626;
+}
+
+.reset:hover:not(:disabled) {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .display {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
+
